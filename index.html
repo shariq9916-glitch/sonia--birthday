@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sonia ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow-x:hidden;
+background:linear-gradient(-45deg,#ff4d6d,#ff758f,#ff8fa3,#ffb3c1);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+color:white;
+text-align:center;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:25px;
+max-width:900px;
+box-shadow:0 0 50px rgba(255,255,255,.3);
+}
+
+.photo{
+width:260px;
+height:260px;
+object-fit:cover;
+border-radius:50%;
+border:8px solid white;
+box-shadow:0 0 40px white;
+animation:heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.08);}
+}
+
+h1{
+font-size:3rem;
+margin-top:20px;
+text-shadow:0 0 20px white;
+}
+
+.typing{
+font-size:1.2rem;
+margin-top:15px;
+min-height:40px;
+}
+
+.message{
+margin-top:20px;
+line-height:1.9;
+font-size:1.1rem;
+}
+
+.btn{
+margin-top:25px;
+padding:15px 30px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4d6d;
+font-weight:bold;
+font-size:18px;
+cursor:pointer;
+}
+
+#surprise{
+display:none;
+margin-top:25px;
+font-size:1.2rem;
+animation:fadeIn 1.5s;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+.heart{
+position:fixed;
+font-size:25px;
+pointer-events:none;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+footer{
+padding:40px;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="card">
+
+<img src="photo.jpeg" class="photo">
+
+<h1>🎂 Happy Birthday Sonia ❤️</h1>
+
+<div class="typing" id="typing"></div>
+
+<div class="message">
+
+Dear Sonia,
+
+<br><br>
+
+You are the most beautiful part of my life.
+
+Every smile of yours makes my day brighter.
+
+Every moment with you becomes a beautiful memory.
+
+Thank you for bringing happiness, love and peace into my world.
+
+<br><br>
+
+May your birthday be filled with endless happiness, success, health and love.
+
+<br><br>
+
+Forever Yours ❤️
+
+<br>
+
+<b>Shariq</b>
+
+</div>
+
+<button class="btn" onclick="openSurprise()">
+🎁 Open Your Surprise
+</button>
+
+<div id="surprise">
+
+💖 SONIA 💖
+
+<br><br>
+
+You are my today,
+
+my tomorrow,
+
+and my forever.
+
+<br><br>
+
+✨ Happy Birthday My Queen ✨
+
+<br><br>
+
+❤️ I LOVE YOU ❤️
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+Made With ❤️ By Shariq
+</footer>
+
+<script>
+
+function openSurprise(){
+
+document.getElementById("surprise").style.display="block";
+
+for(let i=0;i<100;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+}
+
+const text="You are the best thing that ever happened to me ❤️";
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(type,70);
+
+}
+
+}
+
+type();
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+},300);
+
+</script>
+
+</body>
+</html>
